@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flowchart กระบวนการเสนอโครงการ สสข.1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'TH SarabunPSK', 'TH Sarabun New', 'Sarabun', 'Leelawadee UI', Arial, sans-serif;
+    background: #f0f4f8;
+    padding: 20px;
+  }
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    overflow: hidden;
+  }
+  .page-title {
+    background: #1E3A5F;
+    color: white;
+    padding: 20px 28px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .page-title .sub {
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.75;
+    margin-top: 4px;
+  }
+  svg { display: block; width: 100%; height: auto; }
+  @media print {
+    body { background: white; padding: 0; }
+    .wrapper { box-shadow: none; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="page-title">
+  Flowchart กระบวนการเสนอโครงการภายใน
+  <div class="sub">กลุ่มงานอำนวยการ &nbsp;|&nbsp; สำนักงานเขตสุขภาพที่ 1 &nbsp;|&nbsp; ปีงบประมาณ พ.ศ. 2569</div>
+</div>
+
+<svg viewBox="0 0 960 2700" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#7F8C8D"/>
+  </marker>
+  <marker id="arr-red" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#C0392B"/>
+  </marker>
+  <filter id="sh" x="-5%" y="-5%" width="115%" height="125%">
+    <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00000022"/>
+  </filter>
+</defs>
+
+<!-- ═══════════════════════════════
+     SECTION 1 BAR
+═══════════════════════════════ -->
+<rect x="0" y="20" width="960" height="36" fill="#2980B9"/>
+<text x="16" y="44" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="18" font-weight="700" fill="white">ส่วนที่ 1 : กระบวนการก่อนลงรับในระบบ</text>
+
+<!-- START -->
+<rect x="360" y="72" width="240" height="52" rx="26" fill="#1E3A5F" filter="url(#sh)"/>
+<text x="480" y="103" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="20" font-weight="700" fill="white">เริ่มต้น</text>
+
+<!-- Arrow → Step 1 -->
+<line x1="480" y1="124" x2="480" y2="148" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- STEP 1 -->
+<rect x="320" y="150" width="320" height="64" rx="8" fill="#2980B9" filter="url(#sh)"/>
+<text x="480" y="176" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">1. เจ้าของโครงการ</text>
+<text x="480" y="199" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">จัดทำดราฟโครงการ</text>
+
+<!-- Arrow → Step 2 -->
+<line x1="480" y1="214" x2="480" y2="238" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- STEP 2 -->
+<rect x="310" y="240" width="340" height="64" rx="8" fill="#2980B9" filter="url(#sh)"/>
+<text x="480" y="266" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">2. หัวหน้ากลุ่มงาน</text>
+<text x="480" y="289" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ตรวจสอบความถูกต้องและความเหมาะสม</text>
+
+<!-- Arrow → DEC2 -->
+<line x1="480" y1="304" x2="480" y2="328" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- DIAMOND 2 -->
+<polygon points="480,330 590,378 480,426 370,378" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="373" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">ผ่าน?</text>
+
+<!-- REJECT 2 -->
+<line x1="590" y1="378" x2="670" y2="378" stroke="#C0392B" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="672" y="354" width="240" height="52" rx="6" fill="#C0392B"/>
+<text x="792" y="376" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ไม่ผ่าน: แจ้งเจ้าของโครงการ</text>
+<text x="792" y="396" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">แก้ไข → กลับข้อ (1)</text>
+
+<!-- Arrow DEC2 ↓ ผ่าน -->
+<line x1="480" y1="426" x2="480" y2="450" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<text x="490" y="442" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" fill="#7F8C8D">ผ่าน</text>
+
+<!-- STEP 3 -->
+<rect x="290" y="452" width="380" height="64" rx="8" fill="#2980B9" filter="url(#sh)"/>
+<text x="480" y="478" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">3. เจ้าหน้าที่การเงิน (กลุ่มงานการเงินการคลัง)</text>
+<text x="480" y="501" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ตรวจสอบรหัสงบประมาณ/หมวดรายจ่ายเบื้องต้น</text>
+
+<!-- Arrow 3 → DEC3 -->
+<line x1="480" y1="516" x2="480" y2="540" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- DIAMOND 3 -->
+<polygon points="480,542 590,590 480,638 370,590" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="585" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">ผ่าน?</text>
+
+<!-- REJECT 3 -->
+<line x1="590" y1="590" x2="670" y2="590" stroke="#C0392B" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="672" y="566" width="240" height="52" rx="6" fill="#C0392B"/>
+<text x="792" y="588" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ไม่ผ่าน: แจ้งเจ้าของโครงการ</text>
+<text x="792" y="608" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">แก้ไข → กลับข้อ (1)</text>
+
+<!-- Arrow DEC3 ↓ ผ่าน -->
+<line x1="480" y1="638" x2="480" y2="662" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<text x="490" y="654" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" fill="#7F8C8D">ผ่าน</text>
+
+<!-- STEP 4 -->
+<rect x="310" y="664" width="340" height="64" rx="8" fill="#2980B9" filter="url(#sh)"/>
+<text x="480" y="690" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">4. งานยุทธศาสตร์</text>
+<text x="480" y="713" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ตรวจสอบความสอดคล้องกับแผนยุทธศาสตร์</text>
+
+<!-- Arrow 4 → DEC4 -->
+<line x1="480" y1="728" x2="480" y2="752" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- DIAMOND 4 -->
+<polygon points="480,754 590,802 480,850 370,802" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="797" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">ผ่าน?</text>
+
+<!-- REJECT 4 -->
+<line x1="590" y1="802" x2="670" y2="802" stroke="#C0392B" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="672" y="778" width="240" height="52" rx="6" fill="#C0392B"/>
+<text x="792" y="800" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ไม่ผ่าน: แจ้งเจ้าของโครงการ</text>
+<text x="792" y="820" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">แก้ไข → กลับข้อ (1)</text>
+
+<!-- Arrow DEC4 ↓ ผ่าน -->
+<line x1="480" y1="850" x2="480" y2="874" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<text x="490" y="866" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" fill="#7F8C8D">ผ่าน</text>
+
+<!-- STEP 5 -->
+<rect x="310" y="876" width="340" height="64" rx="8" fill="#2980B9" filter="url(#sh)"/>
+<text x="480" y="902" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">5. งานยุทธศาสตร์</text>
+<text x="480" y="925" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ส่งดราฟโครงการให้ ผตร. พิจารณาทางไลน์</text>
+
+<!-- Arrow 5 → DEC5 -->
+<line x1="480" y1="940" x2="480" y2="964" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- DIAMOND 5 (ผตร.) -->
+<polygon points="480,966 600,1022 480,1078 360,1022" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="1015" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">ผตร.</text>
+<text x="480" y="1034" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">เห็นชอบ?</text>
+
+<!-- REJECT 5 -->
+<line x1="600" y1="1022" x2="670" y2="1022" stroke="#C0392B" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="672" y="998" width="240" height="52" rx="6" fill="#C0392B"/>
+<text x="792" y="1020" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ไม่เห็นชอบ: งานยุทธ์แจ้ง</text>
+<text x="792" y="1040" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">เจ้าของโครงการ → (1)</text>
+
+<!-- ═══════════════════════════════
+     SECTION 2 BAR
+═══════════════════════════════ -->
+<rect x="0" y="1096" width="960" height="36" fill="#1A7D6A"/>
+<text x="16" y="1120" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="18" font-weight="700" fill="white">ส่วนที่ 2 : กระบวนการในสำนักงานเขตสุขภาพที่ 1</text>
+
+<!-- Arrow DEC5 ↓ เห็นชอบ -->
+<line x1="480" y1="1078" x2="480" y2="1148" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<text x="490" y="1120" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" fill="#7F8C8D">เห็นชอบ</text>
+
+<!-- STEP 6 -->
+<rect x="290" y="1150" width="380" height="76" rx="8" fill="#1A7D6A" filter="url(#sh)"/>
+<text x="480" y="1176" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">6. ธุรการ/งานสารบรรณ (กลุ่มงานอำนวยการ)</text>
+<text x="480" y="1199" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ลงรับในระบบ ตรวจสอบรูปแบบเอกสาร</text>
+<text x="480" y="1218" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">และพิสูจน์อักษร</text>
+
+<!-- Arrow 6 → DEC6 -->
+<line x1="480" y1="1226" x2="480" y2="1250" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- DIAMOND 6 -->
+<polygon points="480,1252 590,1300 480,1348 370,1300" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="1295" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">ถูกต้อง?</text>
+
+<!-- REJECT 6 -->
+<line x1="590" y1="1300" x2="670" y2="1300" stroke="#C0392B" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="672" y="1276" width="240" height="52" rx="6" fill="#C0392B"/>
+<text x="792" y="1298" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ไม่ถูกต้อง: ส่งกลับเจ้าของ</text>
+<text x="792" y="1318" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">โครงการ → กลับข้อ (6)</text>
+
+<!-- Arrow DEC6 ↓ ถูกต้อง -->
+<line x1="480" y1="1348" x2="480" y2="1372" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<text x="490" y="1364" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" fill="#7F8C8D">ถูกต้อง</text>
+
+<!-- DIAMOND งบประมาณ -->
+<polygon points="480,1374 626,1430 480,1486 334,1430" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="1425" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">ประเภท</text>
+<text x="480" y="1445" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">งบประมาณ?</text>
+
+<!-- ─── LEFT BRANCH: งบพัฒนาเขต ─── -->
+<line x1="334" y1="1430" x2="176" y2="1430" stroke="#7F8C8D" stroke-width="1.8"/>
+<line x1="176" y1="1430" x2="176" y2="1510" stroke="#7F8C8D" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="176" y="1420" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="13" fill="#555">งบพัฒนาเขต</text>
+
+<!-- STEP 7a: กลุ่มงานบริหารการเงินการคลัง -->
+<rect x="44" y="1512" width="264" height="72" rx="8" fill="#1A7D6A" filter="url(#sh)"/>
+<text x="176" y="1538" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="white">7a. กลุ่มงานบริหาร</text>
+<text x="176" y="1558" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">การเงินการคลัง</text>
+<text x="176" y="1576" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ยืนยันแหล่งงบประมาณ</text>
+
+<!-- Arrow 7a → 7a2 -->
+<line x1="176" y1="1584" x2="176" y2="1606" stroke="#7F8C8D" stroke-width="1.8" marker-end="url(#arr)"/>
+
+<!-- STEP 7a2: กลุ่มงานอำนวยการ (การเงินและบัญชี) -->
+<rect x="44" y="1608" width="264" height="72" rx="8" fill="#1A7D6A" filter="url(#sh)"/>
+<text x="176" y="1634" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="white">กลุ่มงานอำนวยการ</text>
+<text x="176" y="1654" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">(การเงินและบัญชี)</text>
+<text x="176" y="1672" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ดำเนินการด้านงบประมาณ</text>
+
+<!-- ─── RIGHT BRANCH: งบอื่นๆ ─── -->
+<line x1="626" y1="1430" x2="784" y2="1430" stroke="#7F8C8D" stroke-width="1.8"/>
+<line x1="784" y1="1430" x2="784" y2="1510" stroke="#7F8C8D" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="784" y="1420" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="13" fill="#555">งบอื่นๆ</text>
+
+<!-- STEP 7b: กลุ่มงานอำนวยการ (การเงินและบัญชี) -->
+<rect x="652" y="1512" width="264" height="72" rx="8" fill="#1A7D6A" filter="url(#sh)"/>
+<text x="784" y="1538" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="white">7b. กลุ่มงานอำนวยการ</text>
+<text x="784" y="1558" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">(การเงินและบัญชี)</text>
+<text x="784" y="1576" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">พิจารณาด้านงบประมาณ</text>
+
+<!-- Merge: left branch (176,1680) and right branch (784,1584) → merge Y=1710 -->
+<line x1="176" y1="1680" x2="176" y2="1710" stroke="#7F8C8D" stroke-width="1.8"/>
+<line x1="784" y1="1584" x2="784" y2="1710" stroke="#7F8C8D" stroke-width="1.8"/>
+<line x1="176" y1="1710" x2="784" y2="1710" stroke="#7F8C8D" stroke-width="1.8"/>
+<line x1="480" y1="1710" x2="480" y2="1732" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- STEP 8 -->
+<rect x="290" y="1734" width="380" height="64" rx="8" fill="#1A7D6A" filter="url(#sh)"/>
+<text x="480" y="1760" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">8. กลุ่มยุทธศาสตร์</text>
+<text x="480" y="1783" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">รวบรวมเอกสารและเสนอ ผอ. (ผ่าน รอง ผอ.)</text>
+
+<!-- Arrow 8 → 9 -->
+<line x1="480" y1="1798" x2="480" y2="1822" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="488" y="1800" width="120" height="18" rx="4" fill="#E8F4FD"/>
+<text x="548" y="1813" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="13" fill="#2980B9">ผ่าน รอง ผอ.</text>
+
+<!-- STEP 9 -->
+<rect x="300" y="1824" width="360" height="64" rx="8" fill="#1A7D6A" filter="url(#sh)"/>
+<text x="480" y="1850" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">9. ผอ. สำนักงานเขตสุขภาพที่ 1</text>
+<text x="480" y="1873" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ลงนามเห็นชอบโครงการ</text>
+
+<!-- Arrow 9 → DEC9 -->
+<line x1="480" y1="1888" x2="480" y2="1912" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- DIAMOND 9 -->
+<polygon points="480,1914 590,1962 480,2010 370,1962" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="1957" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">เห็นชอบ?</text>
+
+<!-- REJECT 9 -->
+<line x1="590" y1="1962" x2="670" y2="1962" stroke="#C0392B" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="672" y="1938" width="240" height="52" rx="6" fill="#C0392B"/>
+<text x="792" y="1960" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ไม่เห็นชอบ: แจ้งกลับ</text>
+<text x="792" y="1980" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">เจ้าของโครงการ (สิ้นสุด)</text>
+
+<!-- ═══════════════════════════════
+     SECTION 3 BAR
+═══════════════════════════════ -->
+<rect x="0" y="2026" width="960" height="36" fill="#6C3483"/>
+<text x="16" y="2050" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="18" font-weight="700" fill="white">ส่วนที่ 3 : กระบวนการเสนอผู้ตรวจราชการ (ผตร.)</text>
+
+<!-- Arrow DEC9 ↓ เห็นชอบ (passes through section bar) -->
+<line x1="480" y1="2010" x2="480" y2="2078" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<text x="490" y="2024" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" fill="#7F8C8D">เห็นชอบ</text>
+
+<!-- STEP 10 -->
+<rect x="290" y="2080" width="380" height="76" rx="8" fill="#6C3483" filter="url(#sh)"/>
+<text x="480" y="2106" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">10. งานยุทธศาสตร์</text>
+<text x="480" y="2129" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">รวบรวมเอกสารโครงการที่เห็นชอบแล้ว</text>
+<text x="480" y="2148" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ตั้งเรื่องเสนอผู้ตรวจราชการ</text>
+
+<!-- Arrow 10 → 11 พร้อม label -->
+<line x1="480" y1="2156" x2="480" y2="2212" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="296" y="2164" width="368" height="24" rx="5" fill="#EDE7F6" stroke="#9B59B6" stroke-width="1"/>
+<text x="480" y="2181" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" font-weight="600" fill="#6C3483">ส่งผ่านงานสารบรรณสำนักงานเขตฯ</text>
+
+<!-- STEP 11 -->
+<rect x="300" y="2214" width="360" height="64" rx="8" fill="#6C3483" filter="url(#sh)"/>
+<text x="480" y="2240" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">11. หน้าห้อง ผตร.</text>
+<text x="480" y="2263" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ตรวจสอบความถูกต้องและครบถ้วน</text>
+
+<!-- Arrow 11 → DEC11 -->
+<line x1="480" y1="2278" x2="480" y2="2302" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- DIAMOND 11 -->
+<polygon points="480,2304 590,2352 480,2400 370,2352" fill="white" stroke="#E67E22" stroke-width="2.5" filter="url(#sh)"/>
+<text x="480" y="2347" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" font-weight="600" fill="#E67E22">ถูกต้อง?</text>
+
+<!-- REJECT 11 -->
+<line x1="590" y1="2352" x2="670" y2="2352" stroke="#C0392B" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="672" y="2328" width="240" height="52" rx="6" fill="#C0392B"/>
+<text x="792" y="2350" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">ไม่ถูกต้อง: แจ้งเจ้าของ</text>
+<text x="792" y="2370" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="white">โครงการ → กลับข้อ (11)</text>
+
+<!-- Arrow DEC11 ↓ ถูกต้อง -->
+<line x1="480" y1="2400" x2="480" y2="2424" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+<text x="490" y="2416" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="14" fill="#7F8C8D">ถูกต้อง</text>
+
+<!-- STEP 12 -->
+<rect x="300" y="2426" width="360" height="64" rx="8" fill="#6C3483" filter="url(#sh)"/>
+<text x="480" y="2452" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="17" font-weight="600" fill="white">12. ผู้ตรวจราชการ (ผตร.)</text>
+<text x="480" y="2475" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="16" fill="white">ลงนามอนุมัติโครงการ</text>
+
+<!-- Arrow 12 → END -->
+<line x1="480" y1="2490" x2="480" y2="2514" stroke="#7F8C8D" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- END -->
+<rect x="360" y="2516" width="240" height="52" rx="26" fill="#1E3A5F" filter="url(#sh)"/>
+<text x="480" y="2547" text-anchor="middle" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="20" font-weight="700" fill="white">สิ้นสุด</text>
+
+<!-- ═══════════════════════════════
+     LEGEND
+═══════════════════════════════ -->
+<rect x="20" y="2588" width="920" height="96" rx="10" fill="#F4F6F7" stroke="#D5D8DC" stroke-width="1.5"/>
+<text x="40" y="2610" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">สัญลักษณ์ที่ใช้ :</text>
+
+<!-- Legend row 1 -->
+<rect x="40" y="2618" width="32" height="18" rx="4" fill="#2980B9"/>
+<text x="80" y="2632" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="#2C3E50">ขั้นตอน ส่วนที่ 1 (ก่อนลงรับ)</text>
+<rect x="290" y="2618" width="32" height="18" rx="4" fill="#1A7D6A"/>
+<text x="330" y="2632" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="#2C3E50">ขั้นตอน ส่วนที่ 2 (ภายในเขต)</text>
+<rect x="540" y="2618" width="32" height="18" rx="4" fill="#6C3483"/>
+<text x="580" y="2632" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="#2C3E50">ขั้นตอน ส่วนที่ 3 (เสนอ ผตร.)</text>
+
+<!-- Legend row 2 -->
+<polygon points="56,2658 80,2672 56,2686 32,2672" fill="white" stroke="#E67E22" stroke-width="2"/>
+<text x="88" y="2678" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="#2C3E50">จุดตัดสินใจ / เงื่อนไข</text>
+<rect x="290" y="2660" width="32" height="18" rx="4" fill="#C0392B"/>
+<text x="330" y="2674" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="#2C3E50">ส่งกลับ / ไม่ผ่าน</text>
+<rect x="540" y="2660" width="32" height="18" rx="9" fill="#1E3A5F"/>
+<text x="580" y="2674" font-family="'TH SarabunPSK','TH Sarabun New','Sarabun',sans-serif" font-size="15" fill="#2C3E50">เริ่มต้น / สิ้นสุด</text>
+
+</svg>
+</div>
+</body>
+</html>
